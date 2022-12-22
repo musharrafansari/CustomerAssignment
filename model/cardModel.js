@@ -16,12 +16,11 @@ const cardSchema=new mongoose.Schema({
     },
     status:{
         type:String,
-        require:true,
-        default:'ACTIVE'
+        enum: ["ACTIVE", "INACTIVE"],
+        default: "ACTIVE"
     },
     vision:{
-        type:String,
-        require:true,
+        type:String
     },
     customerId:{
         type:mongoose.Schema.Types.ObjectId,

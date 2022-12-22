@@ -18,6 +18,7 @@ mongoose.connect('mongodb+srv://musharrafansari:XY5t9CKinqT75evR@cluster0.xsylin
 })
 
 app.use('/',route)
+
 app.listen(6000,()=>{
     console.log(`express is running at ${6000}`)
 })

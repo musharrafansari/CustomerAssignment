@@ -11,9 +11,9 @@ const customerSchema=new mongoose.Schema({
 
     },
     mobileNumber:{
-        type:String,
+        type:Number,
         require:true,
-        // unique:true,
+        unique:true,
     },
     DOB:{
         type: Date,
@@ -36,6 +36,7 @@ const customerSchema=new mongoose.Schema({
     status:{
         type:String,
         require:true,
+        enum: ["ACTIVE", "INACTIVE"],
     },
 },{timestamps:true})
 
